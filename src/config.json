@@ -1,0 +1,55 @@
+{
+  "businessName": "All Fires",
+  "bookingLink": "",
+  "description": "loLorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi voluptates molestias sequi deserunt corrupti magnam nihil itaque nemo maiores. Distinctio, rerum. Sunt natus vitae, dolore at, quidem minima qui fugiat nobis quae consectetur tempore saepe expedita ducimus odit iste excepturi ut nulla tenetur veniam. Consequatur ratione cupiditate enim reiciendis, odit impedit amet illum. Unde ipsam explicabo nostrum earum commodi sapiente ut. Assumenda sapiente soluta ratione commodi. Rerum itaque aliquid ad pariatur numquam excepturi aspernatur. Et, doloremque numquam officiis eos doloribus exercitationem perferendis quasi placeat, nam velit magni rerum nesciunt quibusdam provident inventore culpa ex? Sequi eos magnam tenetur impedit non.rem",
+  "pages": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "What We Do",
+      "url": "/services"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact"
+    }
+  ],
+  "phone": { "name": "0800 2663 473", "url": "tel:+6408002663473" },
+  "email": {
+    "name": "jamal.perreira@allfire.co.nz",
+    "url": "mailto:jamal.perreira@allfire.co.nz"
+  },
+  "socials": [
+    {
+      "name": "instagram",
+      "icon": "mdi:instagram",
+      "url": "https://www.instagram.com/"
+    },
+    {
+      "name": "facebook",
+      "icon": "mdi:facebook",
+      "url": "https://www.facebook.com/"
+    }
+  ],
+  "services": [
+    {
+      "name": "Consultancy",
+      "url": "/services/consultancy"
+    },
+    {
+      "name": "Core drilling",
+      "url": "/services/core-drilling"
+    },
+    {
+      "name": "Acoustic ceiling/detail",
+      "url": "/services/acoustic-ceiling-detail"
+    },
+    {
+      "name": "Passive fire service",
+      "url": "/services/passive-fire-service"
+    }
+  ],
+  "reviews": []
+}

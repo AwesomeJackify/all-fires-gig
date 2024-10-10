@@ -1,0 +1,71 @@
+---
+import astroLogo from "../assets/images/AstroMediaLogo.svg";
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import { getCollection } from "astro:content";
+
+import config from "../config.json";
+
+const services = await getCollection("services");
+---
+
+<footer class="footer p-10 bg-base-200 text-base-content">
+  <aside>
+    <!-- <Image src={logo} alt="logo" class="w-32 p-4 rounded-md" /> -->
+    <h1 class="text-4xl font-bold uppercase">{config.businessName}</h1>
+    <p>
+      <!-- <span class="font-robot">{config.businessName} </span><br /> -->
+      Providing reliable services since 2021
+    </p>
+  </aside>
+  <nav>
+    <h6 class="footer-title">Services</h6>
+    {
+      services.map((service: any) => (
+        <a class="link link-hover" href={`/services/${service.slug}`}>
+          {service.data.name}
+        </a>
+      ))
+    }
+  </nav>
+  <nav>
+    <h6 class="footer-title">Support</h6>
+    <a class="link link-hover" href={config.phone.url}>
+      {config.phone.name}
+    </a>
+    <a class="link link-hover" href={config.email.url}>
+      {config.email.name}
+    </a>
+  </nav>
+  <nav class="flex flex-col h-full">
+    <h6 class="footer-title">Socials</h6>
+    <div class="flex gap-1">
+      {
+        config.socials &&
+          config.socials.map((social: any) => (
+            <a class="group" href={social.url} target="_blank">
+              <Icon
+                name={social.icon}
+                class="text-4xl group-hover:text-primary transition-colors"
+              />
+            </a>
+          ))
+      }
+    </div>
+  </nav>
+  <div class="flex flex-col justify-end h-full">
+    <p class="flex items-center gap-1 max-md:self-center">
+      Made possible by <a
+        href="https://astromedia.dev"
+        class="link hover:text-primary transition-colors"
+        target="_blank">Astro Media</a
+      ><Image
+        class="w-5"
+        src={astroLogo}
+        width={10}
+        height={10}
+        alt="digital agency"
+      />
+    </p>
+  </div>
+</footer>
