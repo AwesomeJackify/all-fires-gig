@@ -6,7 +6,7 @@ import { getCollection } from "astro:content";
 
 import config from "../config.json";
 
-const services = await getCollection("services");
+// const services = await getCollection("services");
 ---
 
 <footer class="footer p-10 bg-base-200 text-base-content">
@@ -20,13 +20,13 @@ const services = await getCollection("services");
   </aside>
   <nav>
     <h6 class="footer-title">Services</h6>
-    {
+    <!-- {
       services.map((service: any) => (
         <a class="link link-hover" href={`/services/${service.slug}`}>
           {service.data.name}
         </a>
       ))
-    }
+    } -->
   </nav>
   <nav>
     <h6 class="footer-title">Support</h6>

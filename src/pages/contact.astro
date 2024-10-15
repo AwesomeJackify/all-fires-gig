@@ -1,0 +1,14 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Cloudinary } from "@cloudinary/url-gen";
+import { trim } from "@cloudinary/url-gen/actions/videoEdit";
+import { accelerate } from "@cloudinary/url-gen/actions/effect";
+import { Image } from "astro:assets";
+
+import config from "../config.json";
+
+import servicesImg from "../assets/images/services.png";
+import aboutUsImg from "../assets/images/about-us.png";
+---
+
+<Layout title={config.businessName}> hello world </Layout>

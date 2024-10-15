@@ -123,14 +123,18 @@ const heroVideoURL = heroVideo.toURL();
           solutions that ensure full compliance, keeping your business running
           smoothly.
         </h2>
-        <ul>
+        <ul class="flex flex-col gap-2">
           {
             config.services.map((service, index) => (
-              <li>
-                <h3 class="font-medium text-5xl max-md:text-2xl">
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  {service.name}
-                </h3>
+              <li class="relative pl-12 max-md:pl-8 w-full">
+                <a href="#" class="link link-hover">
+                  <span class="absolute left-0 top-0 text-3xl max-md:text-xl">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h3 class="font-medium text-5xl max-md:text-2xl">
+                    {service.name}
+                  </h3>
+                </a>
               </li>
             ))
           }
