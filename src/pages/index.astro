@@ -86,7 +86,7 @@ const heroVideoURL = heroVideo.toURL();
           ))
         }
       </div>
-      <video
+      <!-- <video
         autoplay
         loop
         muted
@@ -94,7 +94,7 @@ const heroVideoURL = heroVideo.toURL();
         class="object-cover w-full aspect-video max-md:aspect-auto object-center"
       >
         <source src={heroVideoURL} type="video/mp4" />
-      </video>
+      </video> -->
     </div>
   </section>
   <section class="py-32 px-4">
@@ -127,7 +127,7 @@ const heroVideoURL = heroVideo.toURL();
           {
             config.services.map((service, index) => (
               <li class="relative pl-12 max-md:pl-8 w-full">
-                <a href="#" class="link link-hover">
+                <a href={service.url} class="link link-hover">
                   <span class="absolute left-0 top-0 text-3xl max-md:text-xl">
                     {String(index + 1).padStart(2, "0")}
                   </span>

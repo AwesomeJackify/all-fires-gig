@@ -1,0 +1,60 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+
+import { getCollection } from "astro:content";
+
+const serviceImages = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/images/services/**/*.{jpeg,jpg,png,gif,webp}"
+);
+
+const services = await getCollection("services");
+---
+
+<Layout title="Services">
+  <div class="flex flex-col items-center gap-16 py-16">
+    <h1 class="text-6xl text-center font-bold pt-32">What we do</h1>
+    <div class="flex flex-col max-w-screen-xl mx-auto gap-20 px-2">
+      {
+        services.map((service: any, index: number) => (
+          <div class="grid grid-cols-2 max-md:grid-cols-1 gap-4">
+            <div
+              class={`justify-center md:px-8 flex flex-col gap-8 ${
+                index % 2 ? "md:order-1" : ""
+              }`}
+            >
+              <div class="h-full flex flex-col justify-center gap-4">
+                <h1 class="text-4xl font-bold">{service.data.name}</h1>
+                <h2 class="font-light">{service.data.description}</h2>
+              </div>
+              <a
+                href={`/services/${service.slug}`}
+                class={`btn btn-lg btn-primary w-fit max-md:hidden mt-auto ${
+                  index % 2 ? "" : "md:self-end"
+                }`}
+              >
+                Check it out
+              </a>
+            </div>
+            <Image
+              src={serviceImages[
+                "/src/assets/images/services/" + service.data.featuredImage
+              ]()}
+              alt={service.data.name}
+              class="object-cover aspect-square"
+            />
+            <a
+              href={`/services/${service.slug}`}
+              class={`btn btn-lg btn-primary w-full md:hidden mt-auto ${
+                index % 2 ? "" : "md:self-end"
+              }`}
+            >
+              Check it out
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</Layout>

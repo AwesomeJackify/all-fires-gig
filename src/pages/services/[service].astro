@@ -1,0 +1,48 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Image from "astro/components/Image.astro";
+import type { ImageMetadata } from "astro";
+import { getEntry } from "astro:content";
+
+export function getStaticPaths() {
+  return [
+    { params: { service: "consultancy" } },
+    { params: { service: "core-drilling" } },
+    { params: { service: "acoustic-ceiling-detail" } },
+    { params: { service: "passive-fire-service" } },
+  ];
+}
+
+const { service } = Astro.params;
+
+const serviceImages = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/images/services/**/*.{jpeg,jpg,png,gif,webp}"
+);
+
+const currentServiceEntry = await getEntry("services", service);
+if (!currentServiceEntry) {
+  return { status: 404 };
+}
+const data = currentServiceEntry.data;
+---
+
+<Layout title={data.name}>
+  <section class="flex flex-col">
+    <div class="h-[calc(80dvh)] max-md:h-96 overflow-hidden">
+      <Image
+        src={serviceImages[
+          "/src/assets/images/services/" + data.featuredImage
+        ]()}
+        alt={data.name}
+        class="object-cover h-full w-full"
+      />
+    </div>
+  </section>
+  <section class="max-w-screen-xl mx-auto flex flex-col py-16 px-4 gap-8">
+    <h1 class="text-6xl">{data.name}</h1>
+    <div class="flex flex-col max-w-2xl gap-1">
+      <h1 class="text-xl underline">Description</h1>
+      <p class="font-light">{data.description}</p>
+    </div>
+  </section>
+</Layout>
