@@ -11,6 +11,7 @@ export default {
           ...require("daisyui/src/theming/themes")["cmyk"],
           primary: "#fc002a",
           secondary: "#6D4C41",
+          accent: "#F6A32E",
         },
       },
     ],
