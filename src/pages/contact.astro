@@ -1,17 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Cloudinary } from "@cloudinary/url-gen";
-import { trim } from "@cloudinary/url-gen/actions/videoEdit";
-import { accelerate } from "@cloudinary/url-gen/actions/effect";
-import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 
 import config from "../config.json";
-
-import servicesImg from "../assets/images/services.png";
-import aboutUsImg from "../assets/images/about-us.png";
-
-import Map from "../components/Map";
 ---
 
 <Layout title={config.businessName}>
@@ -78,7 +69,7 @@ import Map from "../components/Map";
                   <input
                     type="text"
                     class="grow"
-                    id="name"
+                    name="name"
                     placeholder="Enter your name..."
                   />
                 </label>
@@ -90,7 +81,7 @@ import Map from "../components/Map";
                   <input
                     type="text"
                     class="grow"
-                    id="email"
+                    name="email"
                     placeholder="Enter your email..."
                   />
                 </label>
@@ -99,7 +90,7 @@ import Map from "../components/Map";
             <div class="flex flex-col gap-1">
               <label class="text-xl">Message</label>
               <textarea
-                id="message"
+                name="message"
                 class="textarea textarea-bordered h-full w-full resize-none"
                 placeholder="I want to know more about..."></textarea>
             </div>
