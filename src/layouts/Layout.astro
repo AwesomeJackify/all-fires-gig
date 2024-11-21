@@ -34,7 +34,7 @@ import Footer from "../components/Footer.astro";
       crossorigin=""></script>
   </head>
   <body>
-    <Nav client:idle />
+    <Nav client:only="react" />
     <slot />
     <Footer />
   </body>

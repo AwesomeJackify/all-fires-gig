@@ -14,7 +14,7 @@ const services = await getCollection("services");
 
 <Layout title="Services">
   <div class="flex flex-col items-center gap-16 py-16">
-    <h1 class="text-6xl text-center font-bold pt-32">What we do</h1>
+    <h1 class="text-6xl text-center font-bold pt-32 max-md:pt-0">What we do</h1>
     <div class="flex flex-col max-w-screen-xl mx-auto gap-20 px-2">
       {
         services.map((service: any, index: number) => (
