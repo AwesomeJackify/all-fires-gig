@@ -59,9 +59,9 @@ const heroVideoURL = heroVideo.toURL();
       class="max-w-screen-lg mx-auto flex flex-col gap-4 mt-24 items-center px-4"
     >
       <h1
-        class="text-8xl max-md:text-5xl text-white font-extrabold text-center"
+        class="text-8xl max-md:text-5xl text-white font-extrabold text-center uppercase"
       >
-        ALL FIRE Passive Fire Protection
+        Fire Protection Services
       </h1>
       <h2
         class="text-center max-w-lg font-extralight text-2xl max-md:text-xl text-white"
@@ -71,11 +71,11 @@ const heroVideoURL = heroVideo.toURL();
       </h2>
     </div>
 
-    <div class="px-4">
+    <div class="px-4 max-w-screen-xl mx-auto w-full">
       <div
         class="grid grid-cols-4 max-md:grid-cols-1 max-w-screen-lg bg-slate-100 rounded-t-2xl"
       >
-        {
+        <!-- {
           stats.map((stat, index) => (
             <div
               class={`flex flex-col p-8 gap-4 text-center border-slate-200 ${index > 0 && "max-md:border-t-2 md:border-l-2"}`}
@@ -84,14 +84,14 @@ const heroVideoURL = heroVideo.toURL();
               <h2 class="">{stat.secondary}</h2>
             </div>
           ))
-        }
+        } -->
       </div>
       <video
         autoplay
         loop
         muted
         playsinline
-        class="object-cover w-full aspect-video max-md:aspect-auto object-center"
+        class="object-cover w-full aspect-video max-md:aspect-square object-center"
       >
         <source src={heroVideoURL} type="video/mp4" />
       </video>
@@ -126,10 +126,10 @@ const heroVideoURL = heroVideo.toURL();
         <ul class="flex flex-col gap-2">
           {
             config.services.map((service, index) => (
-              <li class="relative pl-12 max-md:pl-8 w-full">
+              <li class="relative pl-8 max-md:pl-6 w-full">
                 <a href={service.url} class="link link-hover">
                   <span class="absolute left-0 top-0 text-3xl max-md:text-xl">
-                    {String(index + 1).padStart(2, "0")}
+                    •
                   </span>
                   <h3 class="font-medium text-5xl max-md:text-2xl">
                     {service.name}

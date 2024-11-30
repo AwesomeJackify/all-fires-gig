@@ -9,7 +9,7 @@ export default {
       {
         cmyk: {
           ...require("daisyui/src/theming/themes")["cmyk"],
-          primary: "#fc002a",
+          primary: "#C7232A",
           secondary: "#6D4C41",
           accent: "#F6A32E",
         },

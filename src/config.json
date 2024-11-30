@@ -16,10 +16,10 @@
       "url": "/contact"
     }
   ],
-  "phone": { "name": "0800 2663 473", "url": "tel:+6408002663473" },
+  "phone": { "name": "0800 255 3473", "url": "tel:+6408002553473" },
   "email": {
-    "name": "jamal.perreira@allfire.co.nz",
-    "url": "mailto:jamal.perreira@allfire.co.nz"
+    "name": "info@allfire.co.nz",
+    "url": "mailto:info@allfire.co.nz"
   },
   "socials": [
     {
@@ -48,8 +48,11 @@
       "url": "/services/core-drilling"
     },
     {
-      "name": "Acoustic ceiling/detail",
+      "name": "Acoustic details",
       "url": "/services/acoustic-ceiling-detail"
+    },{
+      "name": "Instrument Coatings",
+      "url": "/services/instrument-coatings"
     },
     {
       "name": "Passive fire service",

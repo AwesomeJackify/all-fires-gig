@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Icon } from "@iconify/react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import logo from "../assets/images/logo.png";
 
 import config from "../config.json";
 
@@ -39,7 +40,7 @@ const Nav = () => {
     <div>
       <div className="navbar bg-base-100 max-md:hidden py-4">
         <div className="navbar-start">
-          <a className="btn btn-ghost text-xl">{config.businessName}</a>
+          <a className="btn btn-ghost btn-lg" href="/"><img src={logo.src} className="w-44" alt="logo" /></a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -56,7 +57,7 @@ const Nav = () => {
       </div>
       <div className="flex flex-col">
         <div className="flex justify-between items-center py-4 px-4 md:hidden sticky">
-          <a className="btn btn-ghost text-2xl">{config.businessName}</a>
+          <a className="btn btn-ghost btn-lg" href="/"><img src={logo.src} className="w-44" alt="logo" /></a>
           <button className="btn btn-ghost" onClick={toggleTimeline}>
             <Icon icon={showNav ? "mdi:close" : "mdi:menu"} className="text-5xl" />
           </button>
