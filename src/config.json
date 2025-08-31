@@ -9,7 +9,7 @@
     },
     {
       "name": "What We Do",
-      "url": "/services"
+      "url": "/#services"
     },
     {
       "name": "Contact",
@@ -40,23 +40,20 @@
   ],
   "services": [
     {
-      "name": "Consultancy",
+      "name": "Fire Protection Consultancy",
       "url": "/services/consultancy"
     },
     {
-      "name": "Core drilling",
-      "url": "/services/core-drilling"
+      "name": "Acoustic Detailing",
+      "url": "/services/acoustic-detailing"
     },
     {
-      "name": "Acoustic details",
-      "url": "/services/acoustic-ceiling-detail"
-    },{
-      "name": "Instrument Coatings",
-      "url": "/services/instrument-coatings"
+      "name": "Fire Door Remedials",
+      "url": "/services/fire-door-remedials"
     },
     {
-      "name": "Passive fire service",
-      "url": "/services/passive-fire-service"
+      "name": "Passive Fire Penetrations",
+      "url": "/services/passive-fire-penetrations"
     }
   ],
   "reviews": [],
